@@ -1,0 +1,81 @@
+1. npm i -g live-server
+2. npm i -g babel-cli 
+3. npm init -y
+4. npm i babel-preset-react babel-preset-env
+5. Overwrite the the second file and compile the JSX
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react
+
+6. When a change is detected
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+7. Start the APP
+live-server public
+
+8. Uninstall all globals
+npm uninstall -g babel-cli live-server
+9. Install locally
+npm install  babel-cli live-server
+10. Add serve and build props to package.json and start the app with
+npm run serve
+npm run build
+
+11. Add webpack
+npm install webpack
+
+12. Make a file in the root
+webpack.config.js
+
+13. Install Validator, React
+npm install validator
+npm install react react-dom
+
+14. Install Babel 
+npm install babel-core babel-loader
+- babel-loader = webpack plugin that teach webpack how to run babel
+- add them to webpack.config
+- create a file .babelrc
+
+15. Add devtool for debugging and show console.logs on webpack.config.js
+devtool: 'cheap-module-eval-source-map'
+
+16. Install webpack dev server
+npm install webpack-dev-server
+- add it to webpack.config.js to let it know where is the public folder
+- and on package.json on scripts 
+
+17. Install Class properties transform (transform-class-properties) from
+https://babeljs.io/docs/plugins/preset-stage-2/
+npm install --save-dev babel-plugin-transform-class-properties
+- add it to plugins to .babelrc
+
+18. START THE APP ONLY WITH 
+npm run dev-server
+
+19. Install React modal
+npm i react-modal
+
+18. START THE APP ONLY WITH 
+npm run dev-server
+
+19. Add new rules for Style in webpack
+test: /\.css$/
+
+Then
+npm install style-loader --save-dev
+npm install --save-dev css-loader
+
+- we use "use: " to add an array(two loaders in this exemple)
+
+20. Install SASS
+http://sass-lang.com
+
+test: /\.scss$/
+
+npm install sass-loader node-sass --save-dev 
+
+21. Install Normalize CSS 
+npm install normalize.css
+
+- add ? to scss to target both css and scss
+test: /\.s?css$/
+
