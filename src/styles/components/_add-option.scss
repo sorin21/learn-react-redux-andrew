@@ -4,3 +4,27 @@
   padding: 0 $m-size;
   margin: $m-size 0 0 0;
 }
+.add-option {
+  display: flex;
+  flex-direction: column;
+  padding: $m-size;
+}
+.add-option__input {
+  background-color: $dark-blue;
+  border: none;
+  border-bottom: .3rem solid darken($dark-blue, 10%);
+  color: $off-white;
+  flex-grow: 1;
+  margin: 0 0 $s-size 0;
+  padding: $s-size;
+}
+// between 45rem and infinite rem
+// smaller then 45rem don't apply this css
+@media (min-width: $desktop-breakpoint) {
+  .add-option {
+    flex-direction: row;
+  }
+  .add-option__input {
+    margin: 0 $s-size 0 0;
+  }
+}

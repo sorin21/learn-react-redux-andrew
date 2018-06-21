@@ -14,7 +14,7 @@ console.log(validator.isEmail('test@yahoo.com'));
 export default class ReactApp extends React.Component {
   state = {
     options: [],
-    selectedOption: undefined
+    selectedOption: undefined,
   };
   
   // constructor(props) {
@@ -114,6 +114,7 @@ export default class ReactApp extends React.Component {
           </div>
         </div>
         <OptionModal 
+          url={this.state.url}
           selectedOption={this.state.selectedOption}
           closeModal={this.closeModal} />
       </div>

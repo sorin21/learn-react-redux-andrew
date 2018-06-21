@@ -20,6 +20,8 @@ npm run serve
 npm run build
 
 11. Add webpack
+https://webpack.js.org/
+
 npm install webpack
 
 12. Make a file in the root
